@@ -12,7 +12,7 @@ import Project from './components/project';
 function App() {
   return (
     <div className="App">
-      <Header></Header> 
+      <Header className="App-header"></Header> 
 
       <Footer></Footer>
     </div>

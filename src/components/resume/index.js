@@ -9,7 +9,7 @@ function Resume() {
     <div className="resume" id="resume">
     <h2>Richard Nelson Resume</h2>
     <p>Note: Please find a <a href="google doc link" target="_blank" rel="noreferrer">downloadable resume here</a></p>
-    <p>Marketing Leader and Full Stack Developer with nearly 20 years of experience in open source technology companies. Proven effectiveness in brand, marketing, communications, and customer engagement. Looking to help leading technology companies continue to increase their awareness, thought leadership, leads, engagement, and customer loyalty. </p>
+    <p>....description.... </p>
     <h3>Development Experience</h3>
     <p>...description...:</p>
     <ul>

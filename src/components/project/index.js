@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 
 function Project(props) {
-	// This imports the information for the current project sent down.
+	
 	const currentProject = useState(props)[0].projects;
 
 	const name = currentProject.name;
@@ -12,7 +12,7 @@ function Project(props) {
 	const appLink = currentProject.deployed;
 	const gitLink = currentProject.github;
 
-	// This function parses the information from the array and creates a list.
+	
 	function getTechs(techArray) {
 		let techList = "";
 
@@ -31,7 +31,7 @@ function Project(props) {
 		<Card style={{ width: "18rem" }}>
 			<Card.Img
 				variant="top"
-				src={require(`../../assets/images/${image}`)}
+				// src={require(`../../assets/images/${image}`)}
 				className="card-image"
 			/>
 			<div className="center">

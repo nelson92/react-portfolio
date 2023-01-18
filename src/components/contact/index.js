@@ -1,3 +1,4 @@
+import { toBeEmpty } from '@testing-library/jest-dom/dist/matchers';
 import React, { useState } from 'react';
 import './style.css';
 
@@ -27,6 +28,7 @@ function Contact() {
     e.preventDevault();
 
     // TODO write a function to validate message body isn't blank
+    // if Name is empty set error message
 
     // function validateForm() {
     //     let x = document.forms["myForm"]["fname"].value;
@@ -69,11 +71,12 @@ function Contact() {
         />
         <button type="button" onClick={handleFormSubmit}>Submit</button>
         </form>
-        {errorMessage && (
         <div>
-          <p className="error-text">{errorMessage}</p>
+          {/* ternary function 
+        {errorMessage ?} 
+          <p className="error-text">Message field can't be blank</p> */}
         </div>
-      )}   
+         
     </div>
 
  );

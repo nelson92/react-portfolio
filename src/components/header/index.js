@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Navigation from "./navigation";
+import Navigation from "../navigation";
 
 
 function Header(props) {
-    const [currentTab, setCurrentTab] = props;
+    const { currentPage, setCurrentPage } = props;
 
    
     return (
@@ -13,8 +13,8 @@ function Header(props) {
 			</div>
 			<div>
 				<Navigation
-					currentTab={currentTab}
-					setCurrentTab={setCurrentTab}
+					currentPage={currentPage}
+					setCurrentPage={setCurrentPage}
 				></Navigation>
 			</div>
 		</header>

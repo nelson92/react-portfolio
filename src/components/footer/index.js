@@ -1,4 +1,8 @@
 import React from 'react';
+import { AiOutlineLinkedin } from "react-icons/ai";
+import { VscGithubAlt } from "react-icons/vsc";
+
+
 
 // TODO import icons from separate folder
 
@@ -6,29 +10,21 @@ import React from 'react';
 function Footer() {
     
     return (
-        <footer className="footer">
-      <div className="content has-text-centered">
-      <p>
-          <strong>React Portfolio</strong> by {" "}
-          <a href="https://github.com/nelson92" target="_blank" rel="noreferrer">
-            Richard Nelson
-            <img src={require("../../assets/ghlogo.png")}
-						alt="GitHub"
-						className="logo"></img>
+      <footer>
+      <p className='react-icons'>
+        <ul>
+          <a href="https://github.com/nelson92">
+            <VscGithubAlt />
+            
           </a>
+          <a href="https://www.linkedin.com/in/richardtnelson/">
+                  <AiOutlineLinkedin />
           
-          <hr />
-          <a href="https://www.linkedin.com/in/richardtnelson/"
-            target="_blank" rel="noreferrer"> LinkedIn
-            <img src={require("../../assets/lilogo.png")}
-						alt="LinkedIn"
-						className="logo"></img>
-          </a>{" "}
-         
-          
-        </p>
-      </div>
-    </footer>
+          </a>
+        </ul>
+      </p>
+
+  </footer>
 
   
     )

@@ -13,42 +13,40 @@ function Project(props) {
 	const gitLink = currentProject.github;
 
 	
-	function getTechs(techArray) {
-		let techList = "";
+	function getCards(cardArray) {
+		let list = "";
 
-		for (var i = 0; i < techArray.length; i++) {
-			if (i === techArray.length - 1) {
-				techList += techArray[i];
+		for (var i = 0; i < cardArray.length; i++) {
+			if (i === cardArray.length - 1) {
+				list += cardArray[i];
 			} else {
-				techList += techArray[i] + ", ";
+				list += cardArray[i] + ", ";
 			}
 		}
 
-		return techList;
+		return list;
 	}
 
 	return (
-		<Card style={{ width: "18rem" }}>
-			<Card.Img
-				variant="top"
-				// src={require(`../../assets/images/${image}`)}
-				className="card-image"
-			/>
-			<div className="center">
+		<Card style={{ width: "28rem" }}>
+			<Card.Img src={require(`../../assets/${image}`)} 	className="card-image"/>
+			
 				<Card.Body>
 					<Card.Title className="card-title">{name}</Card.Title>
 					<Card.Text className="card-text">{description}</Card.Text>
+
 					<Card.Subtitle className="card-subtitle">Technology Used</Card.Subtitle>
-					<Card.Text className="card-techs">{getTechs(techs)}</Card.Text>
+					<Card.Text className="card-techs">{getCards(techs)}</Card.Text>
+
 					<Card.Link href={appLink} target="_blank" className="card-link">
-						{name} App
+						{name} Deployed Application
 					</Card.Link>
 					<br></br>
 					<Card.Link href={gitLink} target="_blank" className="card-link">
-						{name} Github
+						{name} Github Repo
 					</Card.Link>
 				</Card.Body>
-			</div>
+			
 		</Card>
 	);
 }

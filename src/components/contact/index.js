@@ -27,16 +27,7 @@ function Contact() {
  const handleFormSubmit = (e) => {
     e.preventDevault();
 
-    // TODO write a function to validate message body isn't blank
-    // if Name is empty set error message
-
-    // function validateForm() {
-    //     let x = document.forms["myForm"]["fname"].value;
-    //     if (x == "") {
-    //       alert("Name must be filled out");
-    //       return false;
-    //     }
-    //   }
+    
 
     setName('');
     setEmail('');
@@ -45,7 +36,7 @@ function Contact() {
  };
 
  return (
-    <div>
+    <div className="background">
       <h1>Contact</h1>
         
         <form className="form">
@@ -63,7 +54,7 @@ function Contact() {
           type="email"
           placeholder='email'
           />
-          <input
+          <input idName="message form"
           value={message}
           name="message"
           onChange={handleInputChange}

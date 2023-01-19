@@ -1,11 +1,25 @@
 .form {
     margin: 20px;
+    
   }
   
   .form input {
     display: block;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    width: 100%;
+    margin: auto;
+    margin-bottom: 15px;
+    width: 20%;
+    
+
   }
+
+  #message form {
+    height: 30px;
+    width: 20%;
+
+  }
+
+  .background {
+    background: rgb(126, 200, 235);
+    background: radial-gradient(rgb(126, 200, 235) 0%, white 99%);
+}
   

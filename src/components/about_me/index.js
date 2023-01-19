@@ -1,17 +1,18 @@
 import React from 'react';
+import './style.css';
+import pic from '../../assets/headshot.png';
 
 
 
 function AboutMe() {
 
    return (
-    <div className='center'>
+    <div className="text background">
       <h1>About Me</h1>
-      <p className="content is-medium">System Analyst and Full Stack Web Development Student</p>
+      <p className="text">System Analyst and Full Stack Web Development Student</p>
       <hr />
-      {/* TODO add link to picture */}
-      {/* <img className="my-pic" src={process.env.PUBLIC_URL + '/img/profile.jpg'} alt="Richard Nelson"/> */}
-      <p className="content mt-4">
+      <img className="my-pic" src={pic} alt="Richard Nelson"/> 
+      <p className="text">
         I'm Richard and I'm currently a Systems Analyst at a Seattle-based health care start up. 
         I've got 7 years of experience of working at various positions at a tech company and have worked my way up from phone support to associate software developer.
       </p>

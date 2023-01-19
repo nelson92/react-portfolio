@@ -1,14 +1,20 @@
 import React from "react";
-import './style.css'
+import './style.css';
+import myResume from '../../assets/richard_resume_2023.pdf';
+
 
 function Resume() {
 
 
 
+
   return (
-    <div className="resume" id="resume">
+    <div className="resume">
     <h2>Richard Nelson Resume</h2>
-    <p>Note: Please find a <a href="google doc link" target="_blank" rel="noreferrer">downloadable resume here</a></p>
+    <p>Note: Please find a downloadable resume <a href={myResume} className="download-logo" download>
+    here
+    </a>
+    </p>
     <p>....description.... </p>
     <h3>Development Experience</h3>
     <p>...description...:</p>

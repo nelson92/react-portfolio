@@ -8,7 +8,7 @@ function Header(props) {
    
     return (
         <header>
-			<div>
+			<div className="navbar navbar-expand-lg p-3">
 				<h2>Richard's React Portfolio</h2>
 			</div>
 			<div>

@@ -5,7 +5,8 @@ import React from 'react';
 function AboutMe() {
 
    return (
-    <div>
+    <div className='center'>
+      <h1>About Me</h1>
       <p className="content is-medium">System Analyst and Full Stack Web Development Student</p>
       <hr />
       {/* TODO add link to picture */}

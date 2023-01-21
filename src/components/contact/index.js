@@ -1,6 +1,8 @@
-import { toBeEmpty } from '@testing-library/jest-dom/dist/matchers';
+// import { toBeEmpty } from '@testing-library/jest-dom/dist/matchers';
 import React, { useState } from 'react';
 import './style.css';
+import { validateEmail } from '../../utils/helpers.js';
+
 
 // TODO import a helper function to validate message body isn't blank
 
@@ -19,7 +21,7 @@ function Contact() {
     setName(inputValue);
   } else if (inputType === 'email') {
     setEmail(inputValue);
-  } else {
+  } else if (name === 'message') {
     setMessage(inputValue);
   }    
  };
@@ -27,13 +29,23 @@ function Contact() {
  const handleFormSubmit = (e) => {
     e.preventDevault();
 
-    
+  if (!validateEmail(email)) {
+    setErrorMessage('Enter a valid email address')
+    return;
+  }
+  
 
     setName('');
     setEmail('');
     setMessage('');
 
  };
+
+ function checkEmpty(e) {
+  if(!e.target.value) {
+    setErrorMessage( e.target.name + " is a required field");
+  }
+}
 
  return (
     <div className="background">
@@ -44,24 +56,35 @@ function Contact() {
           value={name}
           name="name"
           onChange={handleInputChange}
+          onBlur = {checkEmpty}
           type="text"
+          className='form-control'
           placeholder="name"
         />        
           <input 
           value={email}
           name="email"
           onChange={handleInputChange}
+          onBlur = {checkEmpty}
           type="email"
+          className='form-control'
           placeholder='email'
           />
           <input idName="message form"
           value={message}
           name="message"
           onChange={handleInputChange}
+          onBlur = {checkEmpty}
           type="text"
+          className='form-control'
           placeholder="message"
         />
-        <button type="button" onClick={handleFormSubmit}>Submit</button>
+        <br />
+        <button onClick={handleFormSubmit}
+        className="btn btn-primary"
+        type="submit"
+        >
+          Submit</button>
         </form>
         <div>
           {/* ternary function 

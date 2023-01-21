@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-portfolio/static/css/main.1217ede7.css",
+    "main.js": "/react-portfolio/static/js/main.c82b3113.js",
+    "static/js/787.a2cb61a6.chunk.js": "/react-portfolio/static/js/787.a2cb61a6.chunk.js",
+    "static/media/catsanddogs.png": "/react-portfolio/static/media/catsanddogs.53b97aa594a6d1fbee8e.png",
+    "static/media/pwa.texteditor.png": "/react-portfolio/static/media/pwa.texteditor.b0ce32fcaad35f3cb5a1.png",
+    "static/media/note.taker.png": "/react-portfolio/static/media/note.taker.cd6df840fada9b52a81f.png",
+    "static/media/news.png": "/react-portfolio/static/media/news.05b3da1a4601e0676e28.png",
+    "static/media/richard_resume_2023.pdf": "/react-portfolio/static/media/richard_resume_2023.5a2fb45f457d9ab17847.pdf",
+    "static/media/headshot.png": "/react-portfolio/static/media/headshot.efbb82c82e9b850fbbc2.png",
+    "static/media/logo.svg": "/react-portfolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/react-portfolio/index.html",
+    "main.1217ede7.css.map": "/react-portfolio/static/css/main.1217ede7.css.map",
+    "main.c82b3113.js.map": "/react-portfolio/static/js/main.c82b3113.js.map",
+    "787.a2cb61a6.chunk.js.map": "/react-portfolio/static/js/787.a2cb61a6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1217ede7.css",
+    "static/js/main.c82b3113.js"
+  ]
+}

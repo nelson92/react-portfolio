@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import Navigation from "../navigation";
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+
 
 
 function Header(props) {
@@ -7,17 +11,17 @@ function Header(props) {
 
    
     return (
-        <header className="navbar navbar-expand-lg navbar-light bg-light">
-			<div>
-				<h2>Richard Nelson's Portfolio</h2>
-			</div>
+        <Navbar bg="light" variant="light">
+        <Container>
+				
 			<div>
 				<Navigation
 					currentPage={currentPage}
 					setCurrentPage={setCurrentPage}
 				></Navigation>
 			</div>
-		</header>
+			</Container>
+		</Navbar>
 
 
     );

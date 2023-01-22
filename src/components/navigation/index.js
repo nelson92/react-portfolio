@@ -1,26 +1,25 @@
 import React from "react";
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
 
 function Navigation(props) {
     const { currentPage, setCurrentPage } = props;
 
     return (
-        <nav>
-			<ul className="flex-row mobile-view">
-				<li className={currentPage === "about" ? "mx-2 navActive" : "mx-2"}>
-					<span onClick={() => setCurrentPage("AboutMe")}>About Me</span>
-				</li>
-				<li className={currentPage === "portfolio" ? "mx-2 navActive" : "mx-2"}>
-					<span onClick={() => setCurrentPage("Portfolio")}>Portfolio</span>
-				</li>
-				<li className={currentPage === "contact" ? "mx-2 navActive" : "mx-2"}>
-					<span onClick={() => setCurrentPage("Contact")}>Contact</span>
-				</li>
-				<li className={currentPage === "resume" ? "mx-2 navActive" : "mx-2"}>
-					<span onClick={() => setCurrentPage("Resume")}>Resume</span>
-				</li>
-			</ul>
-		</nav>
+        <Navbar bg="light" variant="light">
+			<Container>
+			<Navbar.Brand >Richard Nelson's Portfolio</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link onClick={() => setCurrentPage("AboutMe")}>About Me</Nav.Link>
+            <Nav.Link onClick={() => setCurrentPage("Portfolio")}>Portfolio</Nav.Link>
+            <Nav.Link onClick={() => setCurrentPage("Contact")}>Contact</Nav.Link>
+			<Nav.Link onClick={() => setCurrentPage("Resume")}>Resume</Nav.Link>
+
+          </Nav>
+			</Container>
+		</Navbar>
 
     );
 }

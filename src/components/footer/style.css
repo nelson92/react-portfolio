@@ -1,5 +1,16 @@
-.react-icons {
+/* .react-icons {
     vertical-align: middle;
     margin: auto;
     margin-left: 20px;
+  } */
+
+  .react-icons {
+    display: flex;
+    margin: auto;
+  }
+  
+  .react-icons ul {
+    align-items: center;
+    width: 100%;
+    font-size: xx-large;
   }

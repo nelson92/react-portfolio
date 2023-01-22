@@ -2,6 +2,7 @@ import React from 'react';
 import Project from '../project';
 import './style.css';
 
+
 // TODO import images for projects
 
 function Portfolio() {
@@ -103,22 +104,22 @@ function Portfolio() {
 			</div>
 			<div>
 				<ul className="flex-row mobile-row">
-					<li className="padding">
+					<li>
 						<Project projects={projects[0]}></Project>
 					</li>
-					<li className="padding">
+					<li>
 						<Project projects={projects[1]}></Project>
 					</li>
-					<li className="padding">
+					<li>
 						<Project projects={projects[2]}></Project>
 					</li>
-					<li className="padding">
+					<li>
 						<Project projects={projects[3]}></Project>
 					</li>
-					<li className="padding">
+					<li>
 						<Project projects={projects[4]}></Project>
 					</li>
-					<li className="padding">
+					<li>
 						<Project projects={projects[5]}></Project>
 					</li>
 				</ul>

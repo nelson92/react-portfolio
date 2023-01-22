@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
+import './style.css';
+// import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function Project(props) {
 	
@@ -28,27 +32,33 @@ function Project(props) {
 	}
 
 	return (
-		<Card style={{ width: "28rem" }}>
-			<Card.Img src={require(`../../assets/${image}`)} 	className="card-image"/>
-			
-				<Card.Body>
-					<Card.Title className="card-title">{name}</Card.Title>
-					<Card.Text className="card-text">{description}</Card.Text>
-
-					<Card.Subtitle className="card-subtitle">Technology Used</Card.Subtitle>
-					<Card.Text className="card-techs">{getCards(techs)}</Card.Text>
-
-					<Card.Link href={appLink} target="_blank" className="card-link">
-						{name} Deployed Application
-					</Card.Link>
-					<br></br>
-					<Card.Link href={gitLink} target="_blank" className="card-link">
-						{name} Github Repo
-					</Card.Link>
-				</Card.Body>
-			
-		</Card>
-	);
+			<Row xs={1} md={2} className="g-4">
+			  {Array.from({ length: 2 }).map((_, idx) => (
+				<Col>
+				  <Card>
+					<Card.Img src={require(`../../assets/${image}`)} className="card-image"/>
+					<Card.Body>
+					  <Card.Title className="card-title inline-size">{name}</Card.Title>
+					  <Card.Text className="card-text inline-size">{description}
+					  </Card.Text>
+					  <Card.Subtitle className="card-subtitle">Technology Used</Card.Subtitle>
+                   <Card.Text>
+                       <p className='card-text'>{getCards(techs)}
+                           </p>car
+                           </Card.Text>
+                   <Card.Link href={appLink} target="_blank" className="card-link">
+                       {name} Deployed Application
+                   </Card.Link>
+                   <br></br>
+                   <Card.Link href={gitLink} target="_blank" className="card-link">
+                       {name} Github Repo
+                   </Card.Link>
+					</Card.Body>
+				  </Card>
+				</Col>
+			  ))}
+			</Row>
+		  );
 }
 
 export default Project;

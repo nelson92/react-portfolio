@@ -7,9 +7,9 @@ function Header(props) {
 
    
     return (
-        <header>
-			<div className="navbar navbar-expand-lg p-3">
-				<h2>Richard's React Portfolio</h2>
+        <header className="navbar navbar-expand-lg navbar-light bg-light">
+			<div>
+				<h2>Richard Nelson's Portfolio</h2>
 			</div>
 			<div>
 				<Navigation

@@ -11,6 +11,7 @@ function Contact() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
 
  const handleInputChange = (e) => {
     const { target } = e;
@@ -33,19 +34,23 @@ function Contact() {
     setErrorMessage('Enter a valid email address')
     return;
   }
-  
 
+  if (!setMessage(message)) {
+    setErrorMessage(`Message is required.`);
+    return;
+  }
+  
     setName('');
     setEmail('');
     setMessage('');
 
  };
 
- function checkEmpty(e) {
-  if(!e.target.value) {
-    setErrorMessage( e.target.name + " is a required field");
-  }
-}
+//  function checkEmpty(e) {
+//   if(!e.target.value) {
+//     setErrorMessage( e.target.name + " is a required field");
+//   }
+// }
 
  return (
     <div className="background">
@@ -56,7 +61,7 @@ function Contact() {
           value={name}
           name="name"
           onChange={handleInputChange}
-          onBlur = {checkEmpty}
+          // onBlur = {checkEmpty}
           type="text"
           className='form-control'
           placeholder="name"
@@ -65,7 +70,7 @@ function Contact() {
           value={email}
           name="email"
           onChange={handleInputChange}
-          onBlur = {checkEmpty}
+          // onBlur = {checkEmpty}
           type="email"
           className='form-control'
           placeholder='email'
@@ -74,7 +79,7 @@ function Contact() {
           value={message}
           name="message"
           onChange={handleInputChange}
-          onBlur = {checkEmpty}
+          // onBlur = {checkEmpty}
           type="text"
           className='form-control'
           placeholder="message"

@@ -67,6 +67,33 @@ function Portfolio() {
 			github: 'https://github.com/nelson92/project-one',
 			deployed: 'https://nelson92.github.io/project-one/',
 		},
+		{
+			name: 'Password Generator',
+			description:
+				'An application that an employee can use to generate a random password based on criteria they have selected. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code',
+			image: 'password_generator.png',
+			technologies: [
+				'JavaScript',
+				'HTML & CSS',
+				
+			],
+			github: 'https://github.com/nelson92/challenge--3-code',
+			deployed: 'https://nelson92.github.io/challenge--3-code/',
+		},
+		{
+			name: 'Word Day Scheduler',
+			description:
+				'A simple calendar application that allows a user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.',
+			image: 'scheduler.png',
+			technologies: [
+				'JavaScript',
+				'HTML & CSS',
+				'Jquery'
+				
+			],
+			github: 'https://github.com/nelson92/work-day-scheduler',
+			deployed: 'https://nelson92.github.io/work-day-scheduler/',
+		},
 	];
 
     return (
@@ -82,13 +109,17 @@ function Portfolio() {
 					<li className="padding">
 						<Project projects={projects[1]}></Project>
 					</li>
-				</ul>
-				<ul className="flex-row mobile-row">
 					<li className="padding">
 						<Project projects={projects[2]}></Project>
 					</li>
 					<li className="padding">
 						<Project projects={projects[3]}></Project>
+					</li>
+					<li className="padding">
+						<Project projects={projects[4]}></Project>
+					</li>
+					<li className="padding">
+						<Project projects={projects[5]}></Project>
 					</li>
 				</ul>
 				
